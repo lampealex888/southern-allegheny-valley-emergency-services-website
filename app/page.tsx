@@ -103,7 +103,7 @@ export default function Home() {
             "url(https://swiperjs.com/demos/images/nature-10.jpg)",
         }}
       >
-        <div className="bg-base-100 bg-opacity-75">
+        <div className="bg-base-100 bg-opacity-75 pb-16 min-h-[550px]">
           <h3 className="text-5xl text-center font-bold italic text-secondary pt-16 pb-8">
             Our Apparatus
           </h3>
@@ -122,7 +122,7 @@ export default function Home() {
               onSwiper={(swiper) => console.log(swiper)}
               onSlideChange={() => console.log("slide change")}
               modules={[Navigation]}
-              className="min-h-[550px]"
+              className=""
             >
               <SwiperSlide className="">
                 <div className="hover:scale-110 transition-all duration-500 cursor-pointer">
@@ -224,10 +224,60 @@ export default function Home() {
             "url(https://images.unsplash.com/photo-1563062067-7700e1d9ae1d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
         }}
       >
-        <h3 className="text-5xl text-center font-bold italic text-secondary pt-16 pb-8">
-          Our Apparatus
-        </h3>
-        <div className="xl:mx-8"></div>
+        <div className="bg-base-content bg-opacity-75 min-h-[400px] text-base-100">
+          <h3 className="text-5xl text-center font-bold italic py-16 tracking-tighter">
+            South Allegheny Vally Volunteer Emergency Services Members
+          </h3>
+          <p className="text-center mx-8 font-bold text-lg tracking-tighter mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit
+            amet velit eu libero consectetur iaculis ac sed orci. Nulla dictum
+            consequat magna, eu dictum orci dapibus at. Duis at mollis diam.
+            Maecenas sed ante ultricies mi eleifend tempus. Maecenas libero
+            metus, viverra pulvinar quam sed, sodales fringilla enim. Aenean
+            rutrum commodo quam tristique elementum.
+          </p>
+          <Link
+            href="/"
+            className="btn btn-secondary text-xl uppercase flex w-1/4 mx-auto"
+          >
+            {" "}
+            Meet our members
+          </Link>
+        </div>
+      </div>
+      {/* Banner 3 */}
+      <div
+        className="bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage:
+            "url(https://images.unsplash.com/photo-1531431199010-1f9985f83baa?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        }}
+      >
+        <div className="bg-base-100 bg-opacity-75 min-h-[350px] text-secondary">
+          <div className="flex flex-row justify-center min-h-[350px] items-center mx-16">
+          <Link href="/" className="flex flex-col items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 64 512"
+                className="h-24 w-24 fill-secondary my-8"
+              >
+                <path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V320c0 17.7 14.3 32 32 32s32-14.3 32-32V64zM32 480a40 40 0 1 0 0-80 40 40 0 1 0 0 80z" />
+              </svg>
+              <span className="text-5xl font-bold italic">Safety Tips</span>
+            </Link>
+            <div className="border-l-4 border-base-content min-h-[200px] mx-24"></div>
+            <Link href="/" className="flex flex-col items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512"
+                className="h-24 w-24 fill-secondary my-8"
+              >
+                <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+              </svg>
+              <span className="text-5xl font-bold italic">View our videos</span>
+            </Link>
+          </div>
+        </div>
       </div>
     </main>
   );
