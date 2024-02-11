@@ -86,7 +86,7 @@ export default function Home() {
                     Read more about us
                   </Link>
                   <a
-                    href="donate"
+                    href="https://www.paypal.com/donate?token=wjfQLm43tIjTT1J3lF1c-abaHmU8Gq4Dco1DjRlKBga2Nt2jejhIKLzXks846O5J81IvUFuAtMGCuCdn"
                     className="btn btn-secondary w-1/2 text-xl uppercase"
                   >
                     Make a donation
