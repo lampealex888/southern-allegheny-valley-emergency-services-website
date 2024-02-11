@@ -13,32 +13,34 @@ export default function Home() {
       <Swiper
         style={
           {
-            "--swiper-navigation-color": "#000",
+            "--swiper-navigation-color": "text-base-content",
           } as React.CSSProperties
         }
         slidesPerView={1}
         loop={true}
         navigation={true}
+        autoHeight={true}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
         modules={[Navigation]}
+        className=""
       >
         <SwiperSlide>
           <img
-            className="max-w-7xl mx-auto w-full"
-            src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
+            className="max-w-7xl mx-auto w-full object-cover object-center max-h-[650px]"
+            src="https://images.unsplash.com/photo-1563062067-d1d4e31a089e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           ></img>
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className="max-w-7xl mx-auto w-full"
-            src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg"
+            className="max-w-7xl mx-auto w-full object-cover object-center max-h-[650px]"
+            src="https://plus.unsplash.com/premium_photo-1683133351425-a61570443654?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           ></img>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="flex items-center">
           <img
-            className="max-w-7xl mx-auto w-full"
-            src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg"
+            className="max-w-7xl mx-auto w-full object-cover object-center max-h-[650px]"
+            src="https://images.unsplash.com/photo-1573632400288-4390dee9df40?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           ></img>
         </SwiperSlide>
       </Swiper>
@@ -49,8 +51,8 @@ export default function Home() {
             <h2 className="text-[2.75rem] font-bold tracking-tight italic text-neutral mb-4 text-nowrap">
               About Southern Allegheny Valley Emergency Services
             </h2>
-            <div className="flex flex-row gap-10">
-              <p className="text-xl max-w-sm tracking-tighter leading-relaxed">
+            <div className="flex flex-row gap-10 ">
+              <p className="text-xl max-w-lg tracking-tighter leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id
                 tortor quis nulla rutrum laoreet vel id sem. Curabitur imperdiet
                 finibus velit, in bibendum erat rutrum et. Praesent consectetur
@@ -100,120 +102,118 @@ export default function Home() {
         className="bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            "url(https://swiperjs.com/demos/images/nature-10.jpg)",
+            "url(https://images.unsplash.com/photo-1642541400994-5bf3c9c0a8d9?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
         }}
       >
         <div className="bg-base-100 bg-opacity-75 pb-16 min-h-[550px]">
           <h3 className="text-5xl text-center font-bold italic text-secondary pt-16 pb-8">
             Our Apparatus
           </h3>
-          <div className="xl:mx-8">
-            <Swiper
-              style={
-                {
-                  "--swiper-navigation-color": "#000",
-                } as React.CSSProperties
-              }
-              slidesPerView={4}
-              spaceBetween={30}
-              slidesPerGroup={4}
-              loop={true}
-              navigation={true}
-              onSwiper={(swiper) => console.log(swiper)}
-              onSlideChange={() => console.log("slide change")}
-              modules={[Navigation]}
-              className=""
-            >
-              <SwiperSlide className="">
-                <div className="hover:scale-110 transition-all duration-500 cursor-pointer">
-                  <img
-                    className="w-full object-cover"
-                    src="https://swiperjs.com/demos/images/nature-1.jpg"
-                  ></img>
-                  <span className="bg-base-100 flex text-2xl font-bold text-secondary p-2">
-                    Slide 1
-                  </span>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <div className="hover:scale-110 transition-all duration-500 cursor-pointer">
-                  <img
-                    className="w-full object-cover"
-                    src="https://swiperjs.com/demos/images/nature-2.jpg"
-                  ></img>
-                  <span className="bg-base-100 flex text-2xl font-bold text-secondary p-2">
-                    Slide 2
-                  </span>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <div className="hover:scale-110 transition-all duration-500 cursor-pointer">
-                  <img
-                    className="w-full object-cover"
-                    src="https://swiperjs.com/demos/images/nature-3.jpg"
-                  ></img>
-                  <span className="bg-base-100 flex text-2xl font-bold text-secondary p-2">
-                    Slide 3
-                  </span>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <div className="hover:scale-110 transition-all duration-500 cursor-pointer">
-                  <img
-                    className="w-full object-cover"
-                    src="https://swiperjs.com/demos/images/nature-4.jpg"
-                  ></img>
-                  <span className="bg-base-100 flex text-2xl font-bold text-secondary p-2">
-                    Slide 4
-                  </span>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <div className="hover:scale-110 transition-all duration-500 cursor-pointer">
-                  <img
-                    className="w-full object-cover"
-                    src="https://swiperjs.com/demos/images/nature-5.jpg"
-                  ></img>
-                  <span className="bg-base-100 flex text-2xl font-bold text-secondary p-2">
-                    Slide 5
-                  </span>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <div className="hover:scale-110 transition-all duration-500 cursor-pointer">
-                  <img
-                    className="w-full object-cover"
-                    src="https://swiperjs.com/demos/images/nature-6.jpg"
-                  ></img>
-                  <span className="bg-base-100 flex text-2xl font-bold text-secondary p-2">
-                    Slide 6
-                  </span>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <div className="hover:scale-110 transition-all duration-500 cursor-pointer">
-                  <img
-                    className="w-full object-cover"
-                    src="https://swiperjs.com/demos/images/nature-7.jpg"
-                  ></img>
-                  <span className="bg-base-100 flex text-2xl font-bold text-secondary p-2">
-                    Slide 7
-                  </span>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <div className="hover:scale-110 transition-all duration-500 cursor-pointer">
-                  <img
-                    className="w-full object-cover"
-                    src="https://swiperjs.com/demos/images/nature-8.jpg"
-                  ></img>
-                  <span className="bg-base-100 flex text-2xl font-bold text-secondary p-2">
-                    Slide 8
-                  </span>
-                </div>
-              </SwiperSlide>
-            </Swiper>
-          </div>
+          <Swiper
+            style={
+              {
+                "--swiper-navigation-color": "text-base-content",
+              } as React.CSSProperties
+            }
+            slidesPerView={4}
+            spaceBetween={30}
+            slidesPerGroup={4}
+            loop={true}
+            navigation={true}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log("slide change")}
+            modules={[Navigation]}
+            className="md:mx-8"
+          >
+            <SwiperSlide className="">
+              <div className="hover:scale-110 transition-all duration-500 cursor-pointer">
+                <img
+                  className="w-full object-cover object-center max-h-[300px]"
+                  src="https://images.unsplash.com/photo-1561577050-c31b9a9ad754?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                ></img>
+                <span className="bg-base-100 flex text-2xl font-bold text-secondary p-2">
+                  Slide 1
+                </span>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="">
+              <div className="hover:scale-110 transition-all duration-500 cursor-pointer">
+                <img
+                  className="w-full object-cover object-center max-h-[300px]"
+                  src="https://images.unsplash.com/photo-1633644363874-d59138061196?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                ></img>
+                <span className="bg-base-100 flex text-2xl font-bold text-secondary p-2">
+                  Slide 2
+                </span>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="">
+              <div className="hover:scale-110 transition-all duration-500 cursor-pointer">
+                <img
+                  className="w-full object-cover object-center max-h-[300px]"
+                  src="https://images.unsplash.com/photo-1560878615-49d7c72df626?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                ></img>
+                <span className="bg-base-100 flex text-2xl font-bold text-secondary p-2">
+                  Slide 3
+                </span>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="">
+              <div className="hover:scale-110 transition-all duration-500 cursor-pointer">
+                <img
+                  className="w-full object-cover object-center max-h-[300px]"
+                  src="https://images.unsplash.com/photo-1594072380487-f737a0648246?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                ></img>
+                <span className="bg-base-100 flex text-2xl font-bold text-secondary p-2">
+                  Slide 4
+                </span>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="">
+              <div className="hover:scale-110 transition-all duration-500 cursor-pointer">
+                <img
+                  className="w-full object-cover object-center max-h-[300px]"
+                  src="https://images.unsplash.com/photo-1555276533-a3f3b70c9159?q=80&w=2138&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                ></img>
+                <span className="bg-base-100 flex text-2xl font-bold text-secondary p-2">
+                  Slide 5
+                </span>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="">
+              <div className="hover:scale-110 transition-all duration-500 cursor-pointer">
+                <img
+                  className="w-full object-cover object-center max-h-[300px]"
+                  src="https://images.unsplash.com/photo-1621209120264-0a3401fabab8?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                ></img>
+                <span className="bg-base-100 flex text-2xl font-bold text-secondary p-2">
+                  Slide 6
+                </span>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="">
+              <div className="hover:scale-110 transition-all duration-500 cursor-pointer">
+                <img
+                  className="w-full object-cover object-center max-h-[300px]"
+                  src="https://images.unsplash.com/photo-1608569569998-af1d304af73e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                ></img>
+                <span className="bg-base-100 flex text-2xl font-bold text-secondary p-2">
+                  Slide 7
+                </span>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="">
+              <div className="hover:scale-110 transition-all duration-500 cursor-pointer">
+                <img
+                  className="w-full object-cover object-center max-h-[300px]"
+                  src="https://images.unsplash.com/photo-1562457346-ac8bb5cfea88?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                ></img>
+                <span className="bg-base-100 flex text-2xl font-bold text-secondary p-2">
+                  Slide 8
+                </span>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
       {/* Banner 2 */}
@@ -255,7 +255,7 @@ export default function Home() {
       >
         <div className="bg-base-100 bg-opacity-75 min-h-[350px] text-secondary">
           <div className="flex flex-row justify-center min-h-[350px] items-center mx-16">
-          <Link href="/" className="flex flex-col items-center">
+            <Link href="/" className="flex flex-col items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 64 512"
