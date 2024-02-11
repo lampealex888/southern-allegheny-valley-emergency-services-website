@@ -88,7 +88,7 @@ export default function Header() {
       <div className="bg-secondary text-secondary-content">
         <div className="navbar max-w-7xl mx-auto">
           <div className="navbar-center mx-auto text-xl tracking-tighter">
-            <Link className="btn btn-ghost text-xl" href="/">
+            <Link className="btn btn-ghost text-xl" href="/about">
               Who are we?
             </Link>
             <Link className="btn btn-ghost text-xl" href="/">
