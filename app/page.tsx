@@ -53,29 +53,35 @@ export default function Home() {
             </h2>
             <div className="flex flex-row gap-10 ">
               <p className="text-xl max-w-lg tracking-tighter leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id
-                tortor quis nulla rutrum laoreet vel id sem. Curabitur imperdiet
-                finibus velit, in bibendum erat rutrum et. Praesent consectetur
-                rutrum malesuada.
+              There are probably many perceptions of who we are. Many may think 
+              we are career firefighters and are paid to be ready to respond. 
+              Luckily, as fire prevention has worked to reduce the number of 
+              emergencies that we experience in our homes, very few residents 
+              are forced to call 911. There is a large portion of our community
+               who see us at the Flea Market and other town events throughout 
+               the year, but are lucky enough to never see us during an emergency.
                 <br /> <br />
-                Aenean aliquam, eros ut gravida placerat, mi quam dignissim
-                turpis, at placerat turpis arcu non nisl. Aenean varius libero
-                vel varius consequat. Morbi sed nibh sed erat suscipit sodales.
-                Vestibulum vel ultricies augue. Etiam imperdiet a metus id
-                congue.
+                Know when the alarms sounds, whether it’s for a fire, 
+                smoke investigation, carbon monoxide alarm, motor vehicle 
+                accident or to pump out your basement, your 100% VOLUNTEER 
+                fire department members will continue to respond and make 
+                their personal sacrifices 24 hours a day, 365 days a year!
               </p>
               <div>
                 <div className="text-xl leading-[3rem] flex flex-col mb-8">
                   <span>
-                    &gt; Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit.
+                  <strong> So you may be asking yourself how I can help?</strong>
                   </span>
                   <span>
-                    &gt; Duis id tortor quis nulla rutrum laoreet vel id sem.{" "}
+                    &gt; Will be put towards new equipment such as bunker gear, SCBA (breathing apparatus), 
+                    communications tools and ultimately to a brand new Heavy Rescue{" "}
                   </span>
                   <span>
-                    &gt; Curabitur imperdiet finibus velit, in bibendum erat
-                    rutrum et.
+                    &gt; Consider donating 1/10 of 1% of your home value, 5% of your monthy rent, 
+                    or $1 per square foot of your buisness 
+                  </span>
+                  <span>
+                    &gt; Make a difference today! Donate.
                   </span>
                 </div>
                 <div className="flex justify-around gap-4 text-nowrap">
@@ -229,12 +235,13 @@ export default function Home() {
             South Allegheny Vally Volunteer Emergency Services Members
           </h3>
           <p className="text-center mx-8 font-bold text-lg tracking-tighter mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit
-            amet velit eu libero consectetur iaculis ac sed orci. Nulla dictum
-            consequat magna, eu dictum orci dapibus at. Duis at mollis diam.
-            Maecenas sed ante ultricies mi eleifend tempus. Maecenas libero
-            metus, viverra pulvinar quam sed, sodales fringilla enim. Aenean
-            rutrum commodo quam tristique elementum.
+          Our Department is 100% VOLUNTEER. We have existed for over 125 years serving 
+          the Borough of Aspinwall and surrounding communities. Our members work in the 
+          community, own businesses and are you neighbors. One of the thing all of these 
+          members have in common is the belief in our community and giving back to it. 
+          Many members are not only volunteer firefighters, but also members of other 
+          service organizations. You may know some of them through your affiliations with 
+          these organizations.
           </p>
           <Link
             href="/"
