@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -37,7 +37,7 @@ export default function Home() {
             src="https://plus.unsplash.com/premium_photo-1683133351425-a61570443654?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           ></img>
         </SwiperSlide>
-        <SwiperSlide className="flex items-center">
+        <SwiperSlide>
           <img
             className="max-w-7xl mx-auto w-full object-cover object-center max-h-[650px]"
             src="https://images.unsplash.com/photo-1573632400288-4390dee9df40?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -104,7 +104,7 @@ export default function Home() {
         </div>
       </div>
       {/* Carousel 2 */}
-      <div
+      <div 
         className="bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
@@ -124,11 +124,15 @@ export default function Home() {
             slidesPerView={4}
             spaceBetween={30}
             slidesPerGroup={4}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
             loop={true}
             navigation={true}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
-            modules={[Navigation]}
+            modules={[Navigation, Autoplay]}
             className="md:mx-8"
           >
             <SwiperSlide className="">
