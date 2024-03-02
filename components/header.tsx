@@ -101,7 +101,7 @@ export default function Header() {
                 className="dropdown-content z-[2] menu p-2 shadow bg-secondary text-secondary-content rounded-box w-52 text-xl"
               >
                 <li>
-                  <Link href="/">History</Link>
+                  <Link href="/history">History</Link>
                 </li>
                 <li>
                   <Link href="/">Out Members</Link>
