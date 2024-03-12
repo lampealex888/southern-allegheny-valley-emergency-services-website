@@ -11,8 +11,15 @@ interface Member {
 
 const members: Member[] = [
   { name: 'John Doe', position: 'Manager', category: 'Officers' },
+  { name: 'John Doe', position: 'Manager', category: 'Officers' },
+  { name: 'John Doe', position: 'Manager', category: 'Officers' },
+  { name: 'John Doe', position: 'Manager', category: 'Officers' },
   { name: 'Jane Smith', position: 'Engineer', category: 'Officers' },
   { name: 'Bob Johnson', position: 'Firefighter', category: 'Firefighters' },
+  { name: 'Alice Williams', position: 'Firefighter', category: 'Firefighters' },
+  { name: 'Alice Williams', position: 'Paramedic', category: 'Firefighters' },
+  { name: 'Alice Williams', position: 'Paramedic', category: 'Firefighters' },
+  { name: 'Alice Williams', position: 'Paramedic', category: 'Firefighters' },
   { name: 'Alice Williams', position: 'Paramedic', category: 'Firefighters' },
   // Add more members as needed
 ];
@@ -35,7 +42,7 @@ const Members: React.FC = () => {
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           {Object.entries(groupedMembers).map(([category, categoryMembers]) => (
             <div key={category}>
-              <h2>{category}</h2>
+              <h2 style={{ fontSize: '24px', margin: '10px 0', fontWeight: 'bold', color: 'red' }}>{category}</h2>
               <div
                 style={{
                   display: 'flex',
@@ -55,8 +62,8 @@ const Members: React.FC = () => {
                         fontSize: '26px',
                     }}
                   >
-                    <p>{member.name}</p>
-                    <p>{member.position}</p>
+                    <p style={{ marginBottom: '8px', fontWeight: 'bold', fontSize: '28px', color: 'white' }}>{member.name}</p>
+                    <p style={{ color: 'grey' }}>{member.position}</p>
                   </div>
                 ))}
               </div>
