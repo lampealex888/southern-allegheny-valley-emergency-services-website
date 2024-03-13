@@ -21,11 +21,9 @@ const members: Member[] = [
   { name: 'Alice Williams', position: 'Paramedic', category: 'Firefighters' },
   { name: 'Alice Williams', position: 'Paramedic', category: 'Firefighters' },
   { name: 'Alice Williams', position: 'Paramedic', category: 'Firefighters' },
-  // Add more members as needed
 ];
 
 const Members: React.FC = () => {
-  // Group members by category for rendering
   const groupedMembers = members.reduce((acc, member) => {
     if (!acc[member.category]) {
       acc[member.category] = [];
