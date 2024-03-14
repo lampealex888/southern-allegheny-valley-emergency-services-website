@@ -94,7 +94,7 @@ export default function Header() {
                 role="button"
                 className="btn btn-ghost m-1 text-2xl tracking-tighter"
               >
-                <Link href="/">About Us</Link>
+                <Link href="/aboutus">About Us</Link>
               </div>
               <ul
                 tabIndex={0}

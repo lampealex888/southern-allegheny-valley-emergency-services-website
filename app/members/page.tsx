@@ -10,17 +10,17 @@ interface Member {
 }
 
 const members: Member[] = [
-  { name: 'John Doe', position: 'Manager', category: 'Officers' },
-  { name: 'John Doe', position: 'Manager', category: 'Officers' },
-  { name: 'John Doe', position: 'Manager', category: 'Officers' },
-  { name: 'John Doe', position: 'Manager', category: 'Officers' },
-  { name: 'Jane Smith', position: 'Engineer', category: 'Officers' },
-  { name: 'Bob Johnson', position: 'Firefighter', category: 'Firefighters' },
+  { name: 'John Smith', position: 'Manager', category: 'Officers' },
+  { name: 'John Smith', position: 'Manager', category: 'Officers' },
+  { name: 'John Smith', position: 'Manager', category: 'Officers' },
+  { name: 'John Smith', position: 'Manager', category: 'Officers' },
+  { name: 'John Smith', position: 'Manager', category: 'Officers' },
   { name: 'Alice Williams', position: 'Firefighter', category: 'Firefighters' },
-  { name: 'Alice Williams', position: 'Paramedic', category: 'Firefighters' },
-  { name: 'Alice Williams', position: 'Paramedic', category: 'Firefighters' },
-  { name: 'Alice Williams', position: 'Paramedic', category: 'Firefighters' },
-  { name: 'Alice Williams', position: 'Paramedic', category: 'Firefighters' },
+  { name: 'Alice Williams', position: 'Firefighter', category: 'Firefighters' },
+  { name: 'Alice Williams', position: 'Firefighter', category: 'Firefighters' },
+  { name: 'Alice Williams', position: 'Firefighter', category: 'Firefighters' },
+  { name: 'Alice Williams', position: 'Firefighter', category: 'Firefighters' },
+  { name: 'Alice Williams', position: 'Firefighter', category: 'Firefighters' },
 ];
 
 const Members: React.FC = () => {
