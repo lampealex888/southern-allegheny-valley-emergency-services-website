@@ -1,5 +1,5 @@
 import PageTitle from "@/components/pageTitle";
-import PageContainer from "@/components/pageContainer";
+import PageContainer from "@/components/container";
 import Sidebar from "@/components/sidebar";
 
 export default function History() {
