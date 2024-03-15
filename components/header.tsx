@@ -94,7 +94,7 @@ export default function Header() {
                 role="button"
                 className="btn btn-ghost m-1 text-2xl tracking-tighter"
               >
-                <Link href="/">About Us</Link>
+                <Link href="/aboutus">About Us</Link>
               </div>
               <ul
                 tabIndex={0}
@@ -104,7 +104,7 @@ export default function Header() {
                   <Link href="/history">History</Link>
                 </li>
                 <li>
-                  <Link href="/">Out Members</Link>
+                  <Link href="/members">Our Members</Link>
                 </li>
                 <li>
                   <Link href="/">Fire Stations</Link>
