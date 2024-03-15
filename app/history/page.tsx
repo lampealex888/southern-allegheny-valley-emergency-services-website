@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import PageTitle from "@/components/pageTitle";
 import PageContainer from "@/components/pageContainer";
 import Sidebar from "@/components/sidebar";
