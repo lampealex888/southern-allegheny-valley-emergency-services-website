@@ -15,9 +15,9 @@ export default function Footer() {
         </nav>
         <nav>
           <h6 className="footer-title text-xl">Get Involved</h6>
-          <a href="" className="text-lg link-hover">
+          <Link href="/contact/recruitment" className="text-lg link-hover">
             Volunteer
-          </a>
+          </Link>
           <a
             className="text-lg link-hover"
             href="https://www.paypal.com/donate?token=wjfQLm43tIjTT1J3lF1c-abaHmU8Gq4Dco1DjRlKBga2Nt2jejhIKLzXks846O5J81IvUFuAtMGCuCdn"

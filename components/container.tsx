@@ -1,13 +1,7 @@
-import { Children } from "react";
-
-export default function pageContainer({
+export default function Container({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <div className="flex flex-col justify-around max-w-7xl mx-auto">
-      {children}
-    </div>
-  );
+  return <div className="container mx-auto px-5">{children}</div>;
 }

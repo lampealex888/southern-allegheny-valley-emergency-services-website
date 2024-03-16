@@ -1,30 +1,26 @@
-import PageTitle from "@/components/pageTitle";
-import PageContainer from "@/components/container";
+import Title from "@/components/title";
+import Container from "@/components/container";
 import Sidebar from "@/components/sidebar";
 
-export default function History() {
+export default function AboutUs() {
   return (
-    <div>
-      <PageContainer>
-        <PageTitle title="About Us" />
-
-        <div className="flex">
-          <div className="flex-grow">
-
-            <p style={{ marginBottom: '16px' }}>
-              Example Example Example Example Example Example Example Example Example Example Example Example Example Example
+    <div className="bg-primary text-primary-content">
+      <Title>About Us</Title>
+      <Container>
+        <Sidebar>
+          <div className="flex flex-col gap-4 pt-8">
+            <p>
+              Example Example Example Example Example Example Example Example
+              Example Example Example Example Example Example
             </p>
 
-            <p style={{ marginBottom: '16px' }}>
-            Example Example Example Example Example Example Example Example Example Example Example Example Example Example
+            <p>
+              Example Example Example Example Example Example Example Example
+              Example Example Example Example Example Example
             </p>
-
-
           </div>
-
-          <Sidebar />
-        </div>
-      </PageContainer>
+        </Sidebar>
+      </Container>
     </div>
   );
 }

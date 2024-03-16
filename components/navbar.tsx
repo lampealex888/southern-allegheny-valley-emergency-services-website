@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Header() {
+export default function Navbar() {
   return (
     <header>
       {/* Navbar 1 */}
@@ -120,7 +120,7 @@ export default function Header() {
                       <Link href="/about-us/history">History</Link>
                     </li>
                     <li>
-                      <Link href="/about-us/our-members">Out Members</Link>
+                      <Link href="/about-us/our-members">Our Members</Link>
                     </li>
                     <li>
                       <Link href="/about-us/fire-stations">Fire Stations</Link>
@@ -222,7 +222,7 @@ export default function Header() {
               <li>
                 <details>
                   <summary>
-                    <Link href="/community-outread">Community Outreach</Link>
+                    <Link href="/community-outreach">Community Outreach</Link>
                   </summary>
                   <ul className="p-2 bg-secondary">
                     <li>
@@ -278,7 +278,7 @@ export default function Header() {
               <li>
                 <details>
                   <summary>
-                    <Link href="Contact">Contact</Link>
+                    <Link href="/contact">Contact</Link>
                   </summary>
                   <ul className="p-2 bg-secondary">
                     <li>

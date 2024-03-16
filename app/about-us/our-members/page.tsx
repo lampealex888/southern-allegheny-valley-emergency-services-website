@@ -1,5 +1,5 @@
 import React from 'react';
-import PageTitle from '@/components/pageTitle';
+import PageTitle from '@/components/title';
 import PageContainer from '@/components/container';
 import Sidebar from '@/components/sidebar';
 
