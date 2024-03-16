@@ -26,42 +26,39 @@ const backup_data = {
   },
 };
 
-async function getPost() {
-  if (process.env.NODE_ENV === "development") {
-    return backup_data.data.post;
-  }
-  
-  const query = `
-  query GetPostByUri {
-    post(id: "/fire-safety/", idType: URI) {
-      title
-      content
-    }
-  }
-  `;
+// async function getPost() {
+//   const query = `
+//   query GetPostByUri {
+//     post(id: "/fire-safety/", idType: URI) {
+//       title
+//       content
+//     }
+//   }
+//   `;
 
-  const res = await fetch(process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT || "", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    next: {
-      revalidate: 60,
-    },
-    body: JSON.stringify({ query }),
-  });
+//   const res = await fetch(process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT || "", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     next: {
+//       revalidate: 60,
+//     },
+//     body: JSON.stringify({ query }),
+//   });
 
-  const responseBody = await res.json();
+//   const responseBody = await res.json();
 
-  if (responseBody && responseBody.data && responseBody.data.post) {
-    return responseBody.data.post;
-  } else {
-    throw new Error("Failed to fetch the post");
-  }
-}
+//   if (responseBody && responseBody.data && responseBody.data.post) {
+//     return responseBody.data.post;
+//   } else {
+//     throw new Error("Failed to fetch the post");
+//   }
+// }
 
 export default async function FirePrevention() {
-  const post = await getPost();
+  // const post = await getPost();
+  const post = backup_data.data.post;
 
   return (
     <div className="bg-secondary text-secondary-content">

@@ -86,54 +86,50 @@ const backup_data = {
   }
 }
 
-async function getPosts() {
-  if (process.env.NODE_ENV === "development") {
-    return backup_data.data.posts.nodes;
-  }
-
-  const query = `
-  {
-    posts(where: {categoryName: "apparatus"}) {
-      nodes {
-        title
-        content
-        uri
-        apparatus {
-          model
-          unit
-          year
-          image {
-            node {
-              mediaItemUrl
-            }
-          }
-        }
-      }
-    }
-  }
-  `;
+// async function getPosts() {
+//   const query = `
+//   {
+//     posts(where: {categoryName: "apparatus"}) {
+//       nodes {
+//         title
+//         content
+//         uri
+//         apparatus {
+//           model
+//           unit
+//           year
+//           image {
+//             node {
+//               mediaItemUrl
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+//   `;
   
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT}?query=${encodeURIComponent(
-      query
-    )}`,
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        // ... any other headers you need to include (like authentication tokens)
-      },
-      cache: "no-store",
-    }
-  );
+//   const res = await fetch(
+//     `${process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT}?query=${encodeURIComponent(
+//       query
+//     )}`,
+//     {
+//       method: "GET",
+//       headers: {
+//         "Content-Type": "application/json",
+//         // ... any other headers you need to include (like authentication tokens)
+//       },
+//       cache: "no-store",
+//     }
+//   );
 
-  const { data } = await res.json();
+//   const { data } = await res.json();
 
-  return data.posts.nodes;
-}
+//   return data.posts.nodes;
+// }
 
 export default async function Apparatus() {
-  const posts = await getPosts();
+  const posts = backup_data.data.posts.nodes;
 
   return (
     <div className="bg-primary text-primary-content">
