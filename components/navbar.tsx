@@ -4,6 +4,20 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
+  const mobileCloseDrodpwn = () => {
+    const elem = document.activeElement as HTMLElement;
+    if (elem) {
+      elem.blur();
+    }
+  };
+
+  const desktopCloseDropdowns = () => {
+    const detailsElements = document.querySelectorAll("details");
+    detailsElements.forEach((detailsElement) => {
+      detailsElement.removeAttribute("open");
+    });
+  };
+
   return (
     <header>
       {/* Header 1 */}
@@ -114,7 +128,7 @@ export default function Navbar() {
                 tabIndex={0}
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 bg-secondary"
               >
-                <li className="text-lg">
+                <li className="text-lg" onClick={mobileCloseDrodpwn}>
                   <Link href="/about-us">About Us</Link>
                   <ul className="p-2">
                     <li>
@@ -131,10 +145,10 @@ export default function Navbar() {
                     </li>
                   </ul>
                 </li>
-                <li>
+                <li onClick={mobileCloseDrodpwn}>
                   <Link href="/fire-prevention">Fire Prevention</Link>
                 </li>
-                <li>
+                <li onClick={mobileCloseDrodpwn}>
                   <Link href="/community-outreach">Community Outreach</Link>
                   <ul className="p-2">
                     <li>
@@ -145,12 +159,12 @@ export default function Navbar() {
                     </li>
                   </ul>
                 </li>
-                <li>
+                <li onClick={mobileCloseDrodpwn}>
                   <a href="https://squareup.com/store/aspinwall-volunteer-fire-department">
                     E-Store
                   </a>
                 </li>
-                <li>
+                <li onClick={mobileCloseDrodpwn}>
                   <Link href="/gallery">Gallery</Link>
                   <ul className="p-2">
                     <li>
@@ -164,7 +178,7 @@ export default function Navbar() {
                     </li>
                   </ul>
                 </li>
-                <li>
+                <li onClick={mobileCloseDrodpwn}>
                   <Link href="/resources">Resources</Link>
                   <ul className="p-2">
                     <li>
@@ -178,7 +192,7 @@ export default function Navbar() {
                     </li>
                   </ul>
                 </li>
-                <li>
+                <li onClick={mobileCloseDrodpwn}>
                   <Link href="/contact">Contact</Link>
                   <ul className="p-2">
                     <li>
@@ -200,26 +214,33 @@ export default function Navbar() {
               <li>
                 <details>
                   <summary>
-                    <Link href="/about-us">About Us</Link>
+                    <Link href="/about-us" onClick={desktopCloseDropdowns}>
+                      About Us
+                    </Link>
                   </summary>
                   <ul className="p-2 bg-secondary">
-                    <li>
+                    <li onClick={desktopCloseDropdowns}>
                       <Link href="/about-us/history">History</Link>
                     </li>
-                    <li>
+                    <li onClick={desktopCloseDropdowns}>
                       <Link href="/about-us/our-members">Our Members</Link>
                     </li>
-                    <li>
+                    <li onClick={desktopCloseDropdowns}>
                       <Link href="/about-us/fire-stations">Fire Stations</Link>
                     </li>
-                    <li>
+                    <li onClick={desktopCloseDropdowns}>
                       <Link href="/about-us/apparatus">Apparatus</Link>
                     </li>
                   </ul>
                 </details>
               </li>
               <li>
-                <Link href="/fire-prevention">Fire Prevention</Link>
+                <Link
+                  href="/fire-prevention"
+                  onClick={desktopCloseDropdowns}
+                >
+                  Fire Prevention
+                </Link>
               </li>
               <li>
                 <details>
@@ -227,10 +248,10 @@ export default function Navbar() {
                     <Link href="/community-outreach">Community Outreach</Link>
                   </summary>
                   <ul className="p-2 bg-secondary">
-                    <li>
+                    <li onClick={desktopCloseDropdowns}>
                       <Link href="/community-outreach/events">Events</Link>
                     </li>
-                    <li>
+                    <li onClick={desktopCloseDropdowns}>
                       <Link href="/community-outreach/calendar">Calendar</Link>
                     </li>
                   </ul>
@@ -244,16 +265,18 @@ export default function Navbar() {
               <li>
                 <details>
                   <summary>
-                    <Link href="/gallery">Gallery</Link>
+                    <Link onClick={desktopCloseDropdowns} href="/gallery">
+                      Gallery
+                    </Link>
                   </summary>
                   <ul className="p-2 bg-secondary">
-                    <li>
+                    <li onClick={desktopCloseDropdowns}>
                       <Link href="/gallery/apparatus">Apparatus</Link>
                     </li>
-                    <li>
+                    <li onClick={desktopCloseDropdowns}>
                       <Link href="/gallery/apparatus">Station</Link>
                     </li>
-                    <li>
+                    <li onClick={desktopCloseDropdowns}>
                       <Link href="/gallery/videos">Videos</Link>
                     </li>
                   </ul>
@@ -262,16 +285,21 @@ export default function Navbar() {
               <li>
                 <details>
                   <summary>
-                    <Link href="/resources">Resources</Link>
+                    <Link
+                      onClick={desktopCloseDropdowns}
+                      href="/resources"
+                    >
+                      Resources
+                    </Link>
                   </summary>
                   <ul className="p-2 bg-secondary">
-                    <li>
+                    <li onClick={desktopCloseDropdowns}>
                       <Link href="/resources/downloads">Downloads</Link>
                     </li>
-                    <li>
+                    <li onClick={desktopCloseDropdowns}>
                       <Link href="/resources/links">Links</Link>
                     </li>
-                    <li>
+                    <li onClick={desktopCloseDropdowns}>
                       <Link href="/resources/site-map">Site Map</Link>
                     </li>
                   </ul>
@@ -280,15 +308,17 @@ export default function Navbar() {
               <li>
                 <details>
                   <summary>
-                    <Link href="/contact">Contact</Link>
+                    <Link onClick={desktopCloseDropdowns} href="/contact">
+                      Contact
+                    </Link>
                   </summary>
                   <ul className="p-2 bg-secondary">
-                    <li>
+                    <li onClick={desktopCloseDropdowns}>
                       <Link href="/contact/general-inquiries">
                         General Inquiries
                       </Link>
                     </li>
-                    <li>
+                    <li onClick={desktopCloseDropdowns}>
                       <Link href="/contact/recruitment">Recruitment</Link>
                     </li>
                   </ul>
