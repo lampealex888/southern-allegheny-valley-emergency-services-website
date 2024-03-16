@@ -5,7 +5,42 @@ import Sidebar from "@/components/sidebar";
 import { Suspense } from "react";
 import Loading from "@/components/loading";
 
+const backup_data = {
+  "data": {
+    "post": {
+      "title": "Rescue 102",
+      "content": "\n<p>Five person commercial cab and chassis carrying Hurst Rescue system of Spreaders, Cutters and Rams, Cribbing, High-pressure Air Bags, Cascade System, PTO Generator, Para-Tech Struts, PFD&#8217;s, Initial Incident Rope Rescue Equipment, and 5 ton winch. This unit is QRS (Quick Response Service) certified.</p>\n\n\n\n<p>Currently housed at Station 1.</p>\n",
+      "apparatus": {
+        "model": "Kenco",
+        "unit": "Rescue 102",
+        "year": "2000",
+        "image": {
+          "node": {
+            "mediaItemUrl": "http://southern-allegheny-valley-emergency-services.local/wp-content/uploads/2024/03/01314490420.jpg"
+          }
+        }
+      }
+    }
+  },
+  "extensions": {
+    "debug": [],
+    "queryAnalyzer": {
+      "keys": "0e7ea102a9742117d8886cac28df7db0ee084dbe186964706b98651a29212f42 graphql:Query cG9zdDo0Ng== cG9zdDoyNA==",
+      "keysLength": 104,
+      "keysCount": 4,
+      "skippedKeys": "",
+      "skippedKeysSize": 0,
+      "skippedKeysCount": 0,
+      "skippedTypes": []
+    }
+  }
+}
+
 async function getPost(uri: any) {
+  if (process.env.NODE_ENV === "development") {
+    return backup_data.data.post;
+  }
+  
   const query = `
   query GetPostByUri($uri: ID!) {
     post(id: $uri, idType: URI) {
