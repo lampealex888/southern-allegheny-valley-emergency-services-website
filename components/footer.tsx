@@ -15,9 +15,9 @@ export default function Footer() {
         </nav>
         <nav>
           <h6 className="footer-title text-xl">Get Involved</h6>
-          <a href="" className="text-lg link-hover">
+          <Link href="/contact/recruitment" className="text-lg link-hover">
             Volunteer
-          </a>
+          </Link>
           <a
             className="text-lg link-hover"
             href="https://www.paypal.com/donate?token=wjfQLm43tIjTT1J3lF1c-abaHmU8Gq4Dco1DjRlKBga2Nt2jejhIKLzXks846O5J81IvUFuAtMGCuCdn"
@@ -56,10 +56,10 @@ export default function Footer() {
         </nav>
         <nav>
           <h6 className="footer-title text-xl">Member Links</h6>
-          <a className="link link-hover text-lg">Member Only News</a>
-          <a className="link link-hover text-lg">Member Login</a>
-          <a className="link link-hover text-lg">Billing</a>
-          <a className="link link-hover text-lg">Store</a>
+          <Link href="/member/news" className="link link-hover text-lg">Member Only News</Link>
+          <Link href="/member/login" className="link link-hover text-lg">Member Login</Link>
+          <a href="https://billing.firecompanies.com/" className="link link-hover text-lg">Billing</a>
+          <a href="https://squareup.com/store/aspinwall-volunteer-fire-department" className="link link-hover text-lg">Store</a>
         </nav>
       </div>
     </footer>
