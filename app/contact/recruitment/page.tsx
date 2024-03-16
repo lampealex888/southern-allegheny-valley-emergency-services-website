@@ -5,7 +5,7 @@ import UnderConstruction from "@/components/under-construction";
 
 export default function Recruitment() {
   return (
-    <div className="bg-primary text-primary-content">
+    <div className="bg-success text-success-content">
       <Title>Recruitment</Title>
       <Container>
         <Sidebar>

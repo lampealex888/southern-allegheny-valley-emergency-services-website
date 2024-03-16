@@ -1,7 +1,7 @@
-import React from 'react';
-import PageTitle from '@/components/title';
-import PageContainer from '@/components/container';
-import Sidebar from '@/components/sidebar';
+import React from "react";
+import Title from "@/components/title";
+import Container from "@/components/container";
+import Sidebar from "@/components/sidebar";
 
 interface Member {
   name: string;
@@ -10,17 +10,17 @@ interface Member {
 }
 
 const members: Member[] = [
-  { name: 'John Smith', position: 'Manager', category: 'Officers' },
-  { name: 'John Smith', position: 'Manager', category: 'Officers' },
-  { name: 'John Smith', position: 'Manager', category: 'Officers' },
-  { name: 'John Smith', position: 'Manager', category: 'Officers' },
-  { name: 'John Smith', position: 'Manager', category: 'Officers' },
-  { name: 'Alice Williams', position: 'Firefighter', category: 'Firefighters' },
-  { name: 'Alice Williams', position: 'Firefighter', category: 'Firefighters' },
-  { name: 'Alice Williams', position: 'Firefighter', category: 'Firefighters' },
-  { name: 'Alice Williams', position: 'Firefighter', category: 'Firefighters' },
-  { name: 'Alice Williams', position: 'Firefighter', category: 'Firefighters' },
-  { name: 'Alice Williams', position: 'Firefighter', category: 'Firefighters' },
+  { name: "John Smith", position: "Manager", category: "Officers" },
+  { name: "John Smith", position: "Manager", category: "Officers" },
+  { name: "John Smith", position: "Manager", category: "Officers" },
+  { name: "John Smith", position: "Manager", category: "Officers" },
+  { name: "John Smith", position: "Manager", category: "Officers" },
+  { name: "Alice Williams", position: "Firefighter", category: "Firefighters" },
+  { name: "Alice Williams", position: "Firefighter", category: "Firefighters" },
+  { name: "Alice Williams", position: "Firefighter", category: "Firefighters" },
+  { name: "Alice Williams", position: "Firefighter", category: "Firefighters" },
+  { name: "Alice Williams", position: "Firefighter", category: "Firefighters" },
+  { name: "Alice Williams", position: "Firefighter", category: "Firefighters" },
 ];
 
 const Members: React.FC = () => {
@@ -33,43 +33,39 @@ const Members: React.FC = () => {
   }, {} as Record<string, Member[]>);
 
   return (
-    <PageContainer>
-      <PageTitle title="Members" />
-      <div className="flex flex-row-reverse">
-        <Sidebar />
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          {Object.entries(groupedMembers).map(([category, categoryMembers]) => (
-            <div key={category}>
-              <h2 style={{ fontSize: '24px', margin: '10px 0', fontWeight: 'bold', color: 'red' }}>{category}</h2>
-              <div
-                style={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  justifyContent: 'center',
-                }}
-              >
-                {categoryMembers.map((member, index) => (
-                  <div
-                    key={index}
-                    style={{
-                        border: '1px solid #ccc',
-                        padding: '10px',
-                        textAlign: 'center',
-                        width: '250px',
-                        margin: '10px',
-                        fontSize: '26px',
-                    }}
-                  >
-                    <p style={{ marginBottom: '8px', fontWeight: 'bold', fontSize: '28px', color: 'white' }}>{member.name}</p>
-                    <p style={{ color: 'grey' }}>{member.position}</p>
+    <div className="bg-primary text-primary-content">
+      <Title>Members</Title>
+      <Container>
+        <Sidebar>
+          <div className="flex flex-row-reverse">
+            <div className="flex flex-col items-center">
+              {Object.entries(groupedMembers).map(
+                ([category, categoryMembers]) => (
+                  <div key={category}>
+                    <h2 className="text-2xl mb-3 font-bold">{category}</h2>
+                    <div className="flex flex-wrap justify-center">
+                      {categoryMembers.map((member, index) => (
+                        <div
+                          className="bg-neutral text-secondary-content rounded-lg p-4 m-4 text-center w-64"
+                          key={index}
+                        >
+                          <p className="mb-2 font-bold text-2xl">
+                            {member.name}
+                          </p>
+                          <p className="text-neutral-content">
+                            {member.position}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                ))}
-              </div>
+                )
+              )}
             </div>
-          ))}
-        </div>
-      </div>
-    </PageContainer>
+          </div>
+        </Sidebar>
+      </Container>
+    </div>
   );
 };
 

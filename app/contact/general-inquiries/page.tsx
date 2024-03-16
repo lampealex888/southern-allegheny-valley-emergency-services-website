@@ -5,7 +5,7 @@ import UnderConstruction from "@/components/under-construction";
 
 export default function GeneralInquiries() {
   return (
-    <div className="bg-primary text-primary-content">
+    <div className="bg-success text-success-content">
       <Title>General Inquiries</Title>
       <Container>
         <Sidebar>
