@@ -56,10 +56,10 @@ export default function Footer() {
         </nav>
         <nav>
           <h6 className="footer-title text-xl">Member Links</h6>
-          <a className="link link-hover text-lg">Member Only News</a>
-          <a className="link link-hover text-lg">Member Login</a>
-          <a className="link link-hover text-lg">Billing</a>
-          <a className="link link-hover text-lg">Store</a>
+          <Link href="/member/news" className="link link-hover text-lg">Member Only News</Link>
+          <Link href="/member/login" className="link link-hover text-lg">Member Login</Link>
+          <a href="https://billing.firecompanies.com/" className="link link-hover text-lg">Billing</a>
+          <a href="https://squareup.com/store/aspinwall-volunteer-fire-department" className="link link-hover text-lg">Store</a>
         </nav>
       </div>
     </footer>

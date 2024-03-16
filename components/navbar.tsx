@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <header>
-      {/* Navbar 1 */}
+      {/* Header 1 */}
       <div className="bg-primary text-primary-content">
         <div className="navbar max-w-7xl mx-auto">
           <div className="flex-1 text-md uppercase tracking-tighter gap-1 md:gap-4 flex-col md:flex-row text-center">
@@ -54,7 +54,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      {/* Navbar 2 */}
+      {/* Header 2 */}
       <div className="bg-base-100 text-base-content">
         <div className="navbar max-w-7xl mx-auto justify-between">
           <div className="flex-1 ml-4 max-w-16 min-w-16 md:max-w-32">
@@ -84,10 +84,11 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      {/* Navbar 3 */}
+      {/* Primary navbar */}
       <div className="bg-secondary text-secondary-content">
         <div className="navbar max-w-7xl mx-auto">
           <div className="navbar-start">
+            {/* Mobile navbar, hidden on desktop */}
             <div className="dropdown z-10 bg-secondary text-secondary-content">
               <div
                 tabIndex={0}
@@ -193,6 +194,7 @@ export default function Navbar() {
               </ul>
             </div>
           </div>
+          {/* Desktop navbar, hidden on mobile */}
           <div className="navbar-center hidden lg:flex z-10">
             <ul className="menu menu-horizontal px-1 text-lg">
               <li>
@@ -205,7 +207,7 @@ export default function Navbar() {
                       <Link href="/about-us/history">History</Link>
                     </li>
                     <li>
-                      <Link href="/about-us/our-members">Out Members</Link>
+                      <Link href="/about-us/our-members">Our Members</Link>
                     </li>
                     <li>
                       <Link href="/about-us/fire-stations">Fire Stations</Link>
@@ -294,6 +296,7 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
+          {/* Shown on both desktop and mobile */}
           <div className="navbar-end">
             <Link href="/search" className="btn btn-ghost">
               <svg

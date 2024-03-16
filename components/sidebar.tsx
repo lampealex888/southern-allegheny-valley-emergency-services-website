@@ -7,9 +7,9 @@ export default function Sidebar({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex flex-col md:flex-row gap-6 mb-6">
+    <div className="flex flex-col md:flex-row justify-between mb-6 md:mb-0">
       {children}
-      <div className="min-w-full md:min-w-96 flex flex-col bg-base-200 justify-center p-6 tracking-tight gap-4 text-xl max-h-[800px] my-8 text-base-content">
+      <div className="max-w-sm flex flex-col bg-base-200 justify-center p-6 tracking-tight gap-4 text-xl max-h-[800px] my-8 text-base-content rounded-lg">
         {/* Donation */}
         <span className="font-bold">
           South Allegheny Valley Emergency Services
