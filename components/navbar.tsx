@@ -86,9 +86,9 @@ export default function Navbar() {
               Serving Southern Allegheny Since 1892
             </span>
             <div className="flex flex-col md:flex-row gap-4 mr-4 items-center">
-              <a href="/" className="text-secondary text-xl md:text-3xl">
+              <Link href="/contact/recruitment" className="text-secondary text-xl md:text-3xl">
                 Volunteer
-              </a>
+              </Link>
               <span className="text-3xl hidden md:block"> | </span>
               <a
                 href="https://www.paypal.com/donate?token=wjfQLm43tIjTT1J3lF1c-abaHmU8Gq4Dco1DjRlKBga2Nt2jejhIKLzXks846O5J81IvUFuAtMGCuCdn"
@@ -165,7 +165,7 @@ export default function Navbar() {
                       <Link href="/gallery/apparatus">Apparatus</Link>
                     </li>
                     <li>
-                      <Link href="/gallery/apparatus">Station</Link>
+                      <Link href="/gallery/station">Station</Link>
                     </li>
                     <li>
                       <Link href="/gallery/videos">Videos</Link>
@@ -253,7 +253,7 @@ export default function Navbar() {
                       <Link href="/gallery/apparatus">Apparatus</Link>
                     </li>
                     <li onClick={desktopCloseDropdowns}>
-                      <Link href="/gallery/apparatus">Station</Link>
+                      <Link href="/gallery/station">Station</Link>
                     </li>
                     <li onClick={desktopCloseDropdowns}>
                       <Link href="/gallery/videos">Videos</Link>

@@ -253,7 +253,7 @@ export default function Home() {
             with these organizations.
           </p>
           <Link
-            href="/"
+            href="/about-us/our-members"
             className="btn btn-secondary text-xl uppercase flex w-full md:w-1/4 mx-auto"
           >
             {" "}
