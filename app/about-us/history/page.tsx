@@ -1,15 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 import Title from "@/components/title";
 import Container from "@/components/container";
-import Sidebar from "@/components/sidebar";
+import InfoSidebar from "@/components/info-sidebar";
 
 export default function History() {
   return (
     <div className="bg-primary text-primary-content">
       <Title>History</Title>
       <Container>
-        <Sidebar>
-          <div className="flex flex-col gap-4 pt-8">
+        <div className="flex flex-col-reverse md:flex-row mb-6 md:mb-0 gap-8 min-h-screen my-8">
+          <InfoSidebar />
+          <div className="flex flex-col gap-4 mb-8">
             <p>
               In the mid-1880s, if one were to compare the City of Pittsburgh to
               the parcel of land that lay on the northern banks of the Allegheny
@@ -136,7 +137,7 @@ export default function History() {
               houses on it. This playground was around until the late 60’s.
             </p>
           </div>
-        </Sidebar>
+        </div>
       </Container>
     </div>
   );

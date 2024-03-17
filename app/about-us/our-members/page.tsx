@@ -1,7 +1,7 @@
 import React from "react";
 import Title from "@/components/title";
 import Container from "@/components/container";
-import Sidebar from "@/components/sidebar";
+import InfoSidebar from "@/components/info-sidebar";
 
 interface Member {
   name: string;
@@ -36,7 +36,8 @@ const Members: React.FC = () => {
     <div className="bg-primary text-primary-content">
       <Title>Members</Title>
       <Container>
-        <Sidebar>
+        <div className="flex flex-col-reverse md:flex-row mb-6 md:mb-0 gap-8 min-h-screen my-8">
+          <InfoSidebar />
           <div className="flex flex-row-reverse">
             <div className="flex flex-col items-center">
               {Object.entries(groupedMembers).map(
@@ -63,7 +64,7 @@ const Members: React.FC = () => {
               )}
             </div>
           </div>
-        </Sidebar>
+        </div>
       </Container>
     </div>
   );

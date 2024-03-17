@@ -1,40 +1,30 @@
 import Title from "@/components/title";
 import Container from "@/components/container";
 import Link from "next/link";
-import Sidebar from "@/components/sidebar";
+import InfoSidebar from "@/components/info-sidebar";
 import { Suspense } from "react";
 import Loading from "@/components/loading";
 
 const backup_data = {
-  "data": {
-    "post": {
-      "title": "Rescue 102",
-      "content": "\n<p>Five person commercial cab and chassis carrying Hurst Rescue system of Spreaders, Cutters and Rams, Cribbing, High-pressure Air Bags, Cascade System, PTO Generator, Para-Tech Struts, PFD&#8217;s, Initial Incident Rope Rescue Equipment, and 5 ton winch. This unit is QRS (Quick Response Service) certified.</p>\n\n\n\n<p>Currently housed at Station 1.</p>\n",
-      "apparatus": {
-        "model": "Kenco",
-        "unit": "Rescue 102",
-        "year": "2000",
-        "image": {
-          "node": {
-            "mediaItemUrl": "http://southern-allegheny-valley-emergency-services.local/wp-content/uploads/2024/03/01314490420.jpg"
-          }
-        }
-      }
-    }
+  data: {
+    post: {
+      title: "Rescue 102",
+      content:
+        "\n<p>Five person commercial cab and chassis carrying Hurst Rescue system of Spreaders, Cutters and Rams, Cribbing, High-pressure Air Bags, Cascade System, PTO Generator, Para-Tech Struts, PFD&#8217;s, Initial Incident Rope Rescue Equipment, and 5 ton winch. This unit is QRS (Quick Response Service) certified.</p>\n\n\n\n<p>Currently housed at Station 1.</p>\n",
+      apparatus: {
+        model: "Kenco",
+        unit: "Rescue 102",
+        year: "2000",
+        image: {
+          node: {
+            mediaItemUrl:
+              "https://images.unsplash.com/photo-1552244935-439697eea0bd?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          },
+        },
+      },
+    },
   },
-  "extensions": {
-    "debug": [],
-    "queryAnalyzer": {
-      "keys": "0e7ea102a9742117d8886cac28df7db0ee084dbe186964706b98651a29212f42 graphql:Query cG9zdDo0Ng== cG9zdDoyNA==",
-      "keysLength": 104,
-      "keysCount": 4,
-      "skippedKeys": "",
-      "skippedKeysSize": 0,
-      "skippedKeysCount": 0,
-      "skippedTypes": []
-    }
-  }
-}
+};
 
 // async function getPost(uri: any) {
 //   const query = `
@@ -81,16 +71,17 @@ const backup_data = {
 // }
 
 export default async function PostDetails({ params }: any) {
-  // const post = await getPost(params.uri);
   const post = backup_data.data.post;
+  // const posts = await getPosts();
 
   return (
     <div className="bg-primary text-primary-content">
       <Suspense fallback={<Loading />}>
         <Title>{post.title}</Title>
         <Container>
-          <Sidebar>
-            <div className="flex flex-col py-8 gap-4 mr-8">
+          <div className="flex flex-col-reverse md:flex-row mb-6 md:mb-0 gap-8 min-h-screen my-0 md:my-8">
+            <InfoSidebar />
+            <div className="flex flex-col mt-8 md:mt-0 md:py-8 gap-4 md:mr-8">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={post.apparatus.image.node.mediaItemUrl}
@@ -110,14 +101,14 @@ export default async function PostDetails({ params }: any) {
                 dangerouslySetInnerHTML={{
                   __html: post.content,
                 }}
-                className="w-3/4 leading-tight prose prose-xl text-primary-content"
+                className="md:w-3/4 leading-tight prose prose-xl text-primary-content"
               />
 
               <Link className="text-3xl link-hover" href="/about-us/apparatus">
                 ← Back to Apparatus
               </Link>
             </div>
-          </Sidebar>
+          </div>
         </Container>
       </Suspense>
     </div>
