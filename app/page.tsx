@@ -48,11 +48,11 @@ export default function Home() {
       <div className="bg-primary text-primary-content">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center py-16 px-4">
-            <h2 className="text-3xl font-bold tracking-tight italic text-neutral mb-4">
+            <h2 className="text-5xl font-extrabold tracking-tight italic mb-4 text-center">
               About Southern Allegheny Valley Emergency Services
             </h2>
-            <div className="flex flex-col md:flex-row gap-10 max-w-full">
-              <p className="text-lg max-w-lg tracking-tighter leading-relaxed">
+            <div className="flex flex-col lg:flex-row gap-10 max-w-full">
+              <p className="text-lg lg:max-w-lg tracking-tighter leading-relaxed">
                 There are probably many perceptions of who we are. Many may
                 think we are career firefighters and are paid to be ready to
                 respond. Luckily, as fire prevention has worked to reduce the
@@ -234,11 +234,11 @@ export default function Home() {
             "url(https://images.unsplash.com/photo-1563062067-7700e1d9ae1d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
         }}
       >
-        <div className="bg-base-content bg-opacity-75 min-h-[400px] text-base-100 p-4">
+        <div className="bg-base-content bg-opacity-75 min-h-[400px] text-base-100 px-4 py-8">
           <h3 className="text-5xl text-center font-bold italic md:py-16 tracking-tighter">
             South Allegheny Vally Volunteer Emergency Services Members
           </h3>
-          <p className="text-center md:mx-8 font-bold text-lg tracking-tighter mb-4">
+          <p className="text-center md:mx-8 font-bold text-lg tracking-tighter my-4">
             Our Department is 100% VOLUNTEER. We have existed for over 125 years
             serving the Borough of Aspinwall and surrounding communities. Our
             members work in the community, own businesses and are you neighbors.
@@ -250,7 +250,7 @@ export default function Home() {
           </p>
           <Link
             href="/about-us/our-members"
-            className="btn btn-secondary text-xl uppercase flex w-full md:w-1/4 mx-auto"
+            className="btn btn-secondary text-xl uppercase flex w-full lg:w-1/4 mx-auto"
           >
             {" "}
             Meet our members
@@ -265,11 +265,11 @@ export default function Home() {
             "url(https://images.unsplash.com/photo-1531431199010-1f9985f83baa?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         }}
       >
-        <div className="bg-base-100 bg-opacity-75 min-h-[280px] md:min-h-[350px] text-secondary">
+        <div className="bg-base-100 bg-opacity-75 min-h-[280px] md:min-h-[350px] text-secondary pb-8 md:pb-0">
           <div className="flex flex-row justify-center min-h-[280px] md:min-h-[350px] items-center mx-16">
             <Link
               href="/fire-prevention"
-              className="flex flex-col items-center"
+              className="flex flex-col h-full items-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -278,12 +278,12 @@ export default function Home() {
               >
                 <path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V320c0 17.7 14.3 32 32 32s32-14.3 32-32V64zM32 480a40 40 0 1 0 0-80 40 40 0 1 0 0 80z" />
               </svg>
-              <span className="text-2xl md:text-5xl font-bold italic min-h-[140px] md:min-h-[140px]">
+              <span className="text-2xl md:text-5xl font-bold italic h-full min-h-24 text-center">
                 Safety Tips
               </span>
             </Link>
             <div className="border-l-2 md:border-l-4 border-base-content min-h-[120px] md:min-h-[200px] mx-16 md:mx-24"></div>
-            <Link href="/gallery/videos" className="flex flex-col items-center">
+            <Link href="/gallery/videos" className="flex flex-col min-h-max items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 384 512"
@@ -291,7 +291,7 @@ export default function Home() {
               >
                 <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
               </svg>
-              <span className="text-2xl md:text-5xl font-bold italic min-h-[140px] md:min-h-[140px]">
+              <span className="text-2xl md:text-5xl font-bold italic min-h-24 text-center">
                 View our videos
               </span>
             </Link>
