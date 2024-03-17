@@ -72,53 +72,51 @@ const backup_data = {
   },
 };
 
-async function getPosts() {
-  const query = `
-  {
-    posts(where: {categoryName: "events"}) {
-      nodes {
-        title
-        uri
-        event {
-          startDateTime
-          startTime
-          location {
-            streetAddress
-          }
-        }
-      }
-    }
-  }
-  `;
+// async function getPosts() {
+//   const query = `
+//   {
+//     posts(where: {categoryName: "events"}) {
+//       nodes {
+//         title
+//         uri
+//         event {
+//           startDateTime
+//           startTime
+//           location {
+//             streetAddress
+//           }
+//         }
+//       }
+//     }
+//   }
+//   `;
 
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT}?query=${encodeURIComponent(
-      query
-    )}`,
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        // ... any other headers you need to include (like authentication tokens)
-      },
-      cache: "no-store",
-    }
-  );
+//   const res = await fetch(
+//     `${process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT}?query=${encodeURIComponent(
+//       query
+//     )}`,
+//     {
+//       method: "GET",
+//       headers: {
+//         "Content-Type": "application/json",
+//         // ... any other headers you need to include (like authentication tokens)
+//       },
+//       cache: "no-store",
+//     }
+//   );
 
-  const { data } = await res.json();
+//   const { data } = await res.json();
 
-  return data.posts.nodes;
-}
+//   return data.posts.nodes;
+// }
 
 export default async function EventsSidebar({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  let posts =
-    process.env.NODE_ENV === "development"
-      ? backup_data.data.posts.nodes
-      : await getPosts();
+  let posts = backup_data.data.posts.nodes;
+  // let posts = await getPosts();
 
   posts = posts.sort(
     (
@@ -135,7 +133,7 @@ export default async function EventsSidebar({
         <h2 className="text-3xl"> Upcoming Events</h2>
         <Suspense fallback={<Loading />}>
           <div className="grid gap-6">
-            {posts.map((post: any) => (
+            {slicedPosts.map((post: any) => (
               <div
                 key={post.uri}
                 className="card border bg-accent text-accent-content shadow-xl"

@@ -20,51 +20,49 @@ const backup_data = {
   },
 };
 
-async function getPost(uri: any) {
-  const query = `
-  query GetPostByUri($uri: ID!) {
-    post(id: $uri, idType: URI) {
-      title
-      event {
-        startDateTime
-        startTime
-        location {
-          streetAddress
-        }
-      }
-    }
-  }
-  `;
+// async function getPost(uri: any) {
+//   const query = `
+//   query GetPostByUri($uri: ID!) {
+//     post(id: $uri, idType: URI) {
+//       title
+//       event {
+//         startDateTime
+//         startTime
+//         location {
+//           streetAddress
+//         }
+//       }
+//     }
+//   }
+//   `;
 
-  const variables = {
-    uri,
-  };
+//   const variables = {
+//     uri,
+//   };
 
-  const res = await fetch(process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT || "", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    next: {
-      revalidate: 60,
-    },
-    body: JSON.stringify({ query, variables }),
-  });
+//   const res = await fetch(process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT || "", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     next: {
+//       revalidate: 60,
+//     },
+//     body: JSON.stringify({ query, variables }),
+//   });
 
-  const responseBody = await res.json();
+//   const responseBody = await res.json();
 
-  if (responseBody && responseBody.data && responseBody.data.post) {
-    return responseBody.data.post;
-  } else {
-    throw new Error("Failed to fetch the post");
-  }
-}
+//   if (responseBody && responseBody.data && responseBody.data.post) {
+//     return responseBody.data.post;
+//   } else {
+//     throw new Error("Failed to fetch the post");
+//   }
+// }
 
 export default async function PostDetails({ params }: any) {
-  const post = await getPost(params.uri);
-  // process.env.NODE_ENV === "development"
-  //   ? backup_data.data.post
-  //   : await getPost(params.uri);
+  const post = backup_data.data.post;
+  // const post = await getPost(params.uri);
 
   return (
     <div className="bg-accent text-accent-content">

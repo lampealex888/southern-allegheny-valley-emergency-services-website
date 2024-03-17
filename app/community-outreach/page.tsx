@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-/* eslint-disable react/no-unescaped-entities */
 import Title from "@/components/title";
 import Container from "@/components/container";
 import Calendar from "@/components/calendar";
