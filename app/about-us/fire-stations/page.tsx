@@ -1,7 +1,7 @@
 import UnderConstruction from "@/components/under-construction";
 import Container from "@/components/container";
 import Title from "@/components/title";
-import Sidebar from "@/components/sidebar";
+import Sidebar from "@/components/info-sidebar";
 
 export default function FireStations() {
   return (

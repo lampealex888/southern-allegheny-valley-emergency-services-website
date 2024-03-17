@@ -4,7 +4,7 @@ import Container from "@/components/container";
 
 export default function Recruitment() {
   return (
-    <div className="bg-success text-success-content">
+    <div className="bg-base-content text-base-100">
       <div className="grid grid-rows-[auto 1fr auto] gap-8 min-h-screen pb-8">
         <div className="relative overflow-hidden">
           <img

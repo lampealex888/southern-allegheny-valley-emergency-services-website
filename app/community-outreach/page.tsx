@@ -1,16 +1,20 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react/no-unescaped-entities */
 import Title from "@/components/title";
 import Container from "@/components/container";
-import Sidebar from "@/components/sidebar";
-import UnderConstruction from "@/components/under-construction";
+import Calendar from "@/components/calendar";
+import EventsSidebar from "@/components/events-sidebar";
 
 export default function CommunityOutreach() {
   return (
-    <div className="bg-info text-info-content">
+    <div className="bg-accent text-accent-content">
       <Title>Community Outreach</Title>
       <Container>
-        <Sidebar>
-          <UnderConstruction />
-        </Sidebar>
+        <div className="my-8">
+          <EventsSidebar>
+            <Calendar />
+          </EventsSidebar>
+        </div>
       </Container>
     </div>
   );

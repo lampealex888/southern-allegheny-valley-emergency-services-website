@@ -1,6 +1,6 @@
 import Title from "@/components/title";
 import Container from "@/components/container";
-import Sidebar from "@/components/sidebar";
+import Sidebar from "@/components/info-sidebar";
 import { Suspense } from "react";
 import Loading from "@/components/loading";
 
@@ -61,7 +61,7 @@ export default async function FirePrevention() {
   const post = backup_data.data.post;
 
   return (
-    <div className="bg-secondary text-secondary-content">
+    <div className="bg-primary text-primary-content">
       <Suspense fallback={<Loading />}>
         <Title>{post.title}</Title>
         <Container>

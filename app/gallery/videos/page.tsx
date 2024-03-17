@@ -1,11 +1,11 @@
 import Title from "@/components/title";
 import Container from "@/components/container";
-import Sidebar from "@/components/sidebar";
+import Sidebar from "@/components/info-sidebar";
 import UnderConstruction from "@/components/under-construction";
 
 export default function Videos() {
   return (
-    <div className="bg-neutral text-neutral-content">
+    <div className="bg-base-300 text-base-content">
       <Title>Videos</Title>
       <Container>
         <Sidebar>

@@ -71,7 +71,7 @@ export default function Navbar() {
       {/* Header 2 */}
       <div className="bg-base-100 text-base-content">
         <div className="navbar max-w-7xl mx-auto justify-between">
-          <div className="flex-1 ml-4 max-w-16 min-w-16 md:max-w-32">
+          <div className="flex-1 mx-4 max-w-16 min-w-16 md:max-w-32">
             <Link href="/">
               <Image
                 src="/images/logos/south-logo.png"
@@ -81,20 +81,22 @@ export default function Navbar() {
               />
             </Link>
           </div>
-          <div className="flex flex-col md:flex-row gap-4 mr-4">
-            <span className="md:text-xl lg:text-3xl mr-4 tracking-tighter hidden md:block">
+          <div className="flex flex-row gap-4">
+            <span className="md:text-xl lg:text-3xl mr-4 tracking-tighter md:block">
               Serving Southern Allegheny Since 1892
             </span>
-            <a href="/" className="text-secondary text-xl md:text-3xl">
-              Volunteer
-            </a>
-            <span className="text-3xl hidden md:block"> | </span>
-            <a
-              href="https://www.paypal.com/donate?token=wjfQLm43tIjTT1J3lF1c-abaHmU8Gq4Dco1DjRlKBga2Nt2jejhIKLzXks846O5J81IvUFuAtMGCuCdn"
-              className="text-secondary text-xl md:text-3xl"
-            >
-              Donate
-            </a>
+            <div className="flex flex-col md:flex-row gap-4 mr-4 items-center">
+              <a href="/" className="text-secondary text-xl md:text-3xl">
+                Volunteer
+              </a>
+              <span className="text-3xl hidden md:block"> | </span>
+              <a
+                href="https://www.paypal.com/donate?token=wjfQLm43tIjTT1J3lF1c-abaHmU8Gq4Dco1DjRlKBga2Nt2jejhIKLzXks846O5J81IvUFuAtMGCuCdn"
+                className="text-secondary text-xl md:text-3xl"
+              >
+                Donate
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -150,14 +152,6 @@ export default function Navbar() {
                 </li>
                 <li onClick={mobileCloseDrodpwn}>
                   <Link href="/community-outreach">Community Outreach</Link>
-                  <ul className="p-2">
-                    <li>
-                      <Link href="/community-outreach/events">Events</Link>
-                    </li>
-                    <li>
-                      <Link href="/community-outreach/calendar">Calendar</Link>
-                    </li>
-                  </ul>
                 </li>
                 <li onClick={mobileCloseDrodpwn}>
                   <a href="https://squareup.com/store/aspinwall-volunteer-fire-department">
@@ -235,27 +229,12 @@ export default function Navbar() {
                 </details>
               </li>
               <li>
-                <Link
-                  href="/fire-prevention"
-                  onClick={desktopCloseDropdowns}
-                >
+                <Link href="/fire-prevention" onClick={desktopCloseDropdowns}>
                   Fire Prevention
                 </Link>
               </li>
               <li>
-                <details>
-                  <summary>
-                    <Link href="/community-outreach">Community Outreach</Link>
-                  </summary>
-                  <ul className="p-2 bg-secondary">
-                    <li onClick={desktopCloseDropdowns}>
-                      <Link href="/community-outreach/events">Events</Link>
-                    </li>
-                    <li onClick={desktopCloseDropdowns}>
-                      <Link href="/community-outreach/calendar">Calendar</Link>
-                    </li>
-                  </ul>
-                </details>
+                <Link href="/community-outreach">Community Outreach</Link>
               </li>
               <li>
                 <a href="https://squareup.com/store/aspinwall-volunteer-fire-department">
@@ -285,10 +264,7 @@ export default function Navbar() {
               <li>
                 <details>
                   <summary>
-                    <Link
-                      onClick={desktopCloseDropdowns}
-                      href="/resources"
-                    >
+                    <Link onClick={desktopCloseDropdowns} href="/resources">
                       Resources
                     </Link>
                   </summary>
