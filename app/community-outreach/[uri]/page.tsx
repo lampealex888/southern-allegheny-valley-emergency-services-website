@@ -125,7 +125,7 @@ export default async function PostDetails({ params }: any) {
             </section>
             <Link
               className="text-2xl sm:text-3xl lg:text-4xl link-hover"
-              href="/community-outreach/calendar"
+              href="/community-outreach"
             >
               ← Back to Calendar
             </Link>
