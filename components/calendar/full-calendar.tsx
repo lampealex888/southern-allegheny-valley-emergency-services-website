@@ -19,7 +19,7 @@ export default function Calendar(events: any) {
       selectMirror={true}
       events={events}
       height={"100%"}
-      eventClassNames={"bg-base-100 text-base-content"}
+      eventClassNames={"bg-accent text-accent-content"}
     />
   );
 }

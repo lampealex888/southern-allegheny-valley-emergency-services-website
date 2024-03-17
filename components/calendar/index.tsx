@@ -125,9 +125,7 @@ export default async function Calendar() {
 
   return (
     <Suspense fallback={<Loading />}>
-      <div className="text-base-content p-4 rounded-3xl w-full">
-        <FullCalendar {...{ events }} />
-      </div>
+      <FullCalendar {...{ events }} />
     </Suspense>
   );
 }

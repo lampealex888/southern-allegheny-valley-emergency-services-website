@@ -9,9 +9,12 @@ export default function CommunityOutreach() {
       <Title>Community Outreach</Title>
       <Container>
         <div className="my-8">
-          <EventsSidebar>
-            <Calendar />
-          </EventsSidebar>
+          <div className="flex flex-col md:flex-row mb-6 md:mb-0 gap-8">
+            <EventsSidebar />
+            <div className="hidden xl:block text-base-content bg-neutral p-4 rounded-xl w-full border">
+              <Calendar />
+            </div>
+          </div>
         </div>
       </Container>
     </div>
