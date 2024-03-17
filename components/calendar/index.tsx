@@ -12,7 +12,7 @@ const backup_data = {
           uri: "/southern-allegheny-valley-emergency-services-monthly-meeting-station-1-2/",
           event: {
             startDateTime: "2024-07-09T19:00:00+00:00",
-            startTime: "2024-07-09T21:00:00+00:00",
+            endDateTime: "2024-07-09T21:00:00+00:00",
             location: {
               streetAddress: "1611 Main Street, Pittsburgh, PA, USA",
             },
@@ -24,7 +24,7 @@ const backup_data = {
           uri: "/southern-allegheny-valley-emergency-services-month-meeting-station-2-2/",
           event: {
             startDateTime: "2024-06-11T19:00:00+00:00",
-            startTime: "2024-06-11T21:00:00+00:00",
+            endDateTime: "2024-06-11T21:00:00+00:00",
             location: {
               streetAddress: "1611 Main Street, Pittsburgh, PA, USA",
             },
@@ -36,7 +36,7 @@ const backup_data = {
           uri: "/southern-allegheny-valley-emergency-services-monthly-meeting-station-1/",
           event: {
             startDateTime: "2024-05-14T19:00:00+00:00",
-            startTime: "2024-05-14T21:00:00+00:00",
+            endDateTime: "2024-05-14T21:00:00+00:00",
             location: {
               streetAddress: "1611 Main Street, Pittsburgh, PA, USA",
             },
@@ -48,7 +48,7 @@ const backup_data = {
           uri: "/southern-allegheny-valley-emergency-services-month-meeting-station-2/",
           event: {
             startDateTime: "2024-04-09T19:00:00+00:00",
-            startTime: "2024-04-09T21:00:00+00:00",
+            endDateTime: "2024-04-09T21:00:00+00:00",
             location: {
               streetAddress: "1611 Main Street, Pittsburgh, PA, USA",
             },
@@ -60,7 +60,7 @@ const backup_data = {
           uri: "/annual-fish-fry-sharpsburg-fire-district-1611-main-street/",
           event: {
             startDateTime: "2024-03-29T11:00:00+00:00",
-            startTime: "2024-03-29T19:00:00+00:00",
+            endDateTime: "2024-03-29T19:00:00+00:00",
             location: {
               streetAddress: "1611 Main Street Pittsburgh, PA, USA",
             },
@@ -80,7 +80,7 @@ const backup_data = {
 //         uri
 //         event {
 //           startDateTime
-//           startTime
+//           endDateTime
 //           location {
 //             streetAddress
 //           }
@@ -118,7 +118,7 @@ export default async function Calendar() {
       title: post.title,
       url: `/community-outreach${post.uri}`,
       start: new Date(post.event.startDateTime),
-      end: new Date(post.event.startTime),
+      end: new Date(post.event.endDateTime),
       address: post.event.location.streetAddress,
     };
   });

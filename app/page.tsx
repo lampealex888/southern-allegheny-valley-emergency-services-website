@@ -22,8 +22,6 @@ export default function Home() {
         loop={true}
         navigation={true}
         autoHeight={true}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
         modules={[Navigation]}
         className=""
       >
@@ -134,8 +132,6 @@ export default function Home() {
             }}
             loop={true}
             navigation={true}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
             modules={[Navigation, Autoplay]}
             className="md:mx-8"
           >

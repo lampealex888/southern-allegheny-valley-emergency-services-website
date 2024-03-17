@@ -3,6 +3,7 @@ import Container from "@/components/container";
 import Link from "next/link";
 import { Suspense } from "react";
 import Loading from "@/components/loading";
+import InfoSidebar from "@/components/info-sidebar";
 
 const backup_data = {
   data: {
@@ -20,7 +21,7 @@ const backup_data = {
             image: {
               node: {
                 mediaItemUrl:
-                  "http://southern-allegheny-valley-emergency-services.local/wp-content/uploads/2024/03/01364086750.jpg",
+                  "https://images.unsplash.com/photo-1516056584153-c85af1d8ab83?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
               },
             },
           },
@@ -37,7 +38,7 @@ const backup_data = {
             image: {
               node: {
                 mediaItemUrl:
-                  "http://southern-allegheny-valley-emergency-services.local/wp-content/uploads/2024/03/01313447556.jpg",
+                  "https://images.unsplash.com/photo-1552244935-439697eea0bd?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
               },
             },
           },
@@ -54,7 +55,7 @@ const backup_data = {
             image: {
               node: {
                 mediaItemUrl:
-                  "http://southern-allegheny-valley-emergency-services.local/wp-content/uploads/2024/03/01314490420.jpg",
+                  "https://images.unsplash.com/photo-1622783089891-ddf18baab338?q=80&w=1942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
               },
             },
           },
@@ -71,7 +72,7 @@ const backup_data = {
             image: {
               node: {
                 mediaItemUrl:
-                  "http://southern-allegheny-valley-emergency-services.local/wp-content/uploads/2024/03/01313446036.jpg",
+                  "https://images.unsplash.com/photo-1600624697183-00566baf12e6?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
               },
             },
           },
@@ -124,7 +125,7 @@ const backup_data = {
 // }
 
 export default async function Apparatus() {
-  const posts = backup_data.data.posts.nodes
+  const posts = backup_data.data.posts.nodes;
   // const posts = await getPosts();
 
   return (
@@ -132,47 +133,41 @@ export default async function Apparatus() {
       <Title>Apparatus</Title>
       <Container>
         <Suspense fallback={<Loading />}>
-          <div className="flex flex-col py-8 gap-8">
-            {posts.map((post: any) => (
-              <div
-                key={post.uri}
-                className="flex flex-col md:flex-row p-4 bg-base-100 text-base-content justify-center items-center gap-4 rounded-lg w-fit"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={post.apparatus.image.node.mediaItemUrl}
-                  alt={post.title}
-                  className="w-48 h-48 object-cover rounded-lg mr-4"
-                />
-                <div className="flex flex-col gap-4">
-                  <h3 className="text-3xl text-primary">{post.title}</h3>
-                  <p className="text-neutral-content font-bold">
-                    {post.apparatus.model + " - " + post.apparatus.year}
-                  </p>
-                  <div
-                    className="prose max-w-md"
-                    dangerouslySetInnerHTML={{
-                      __html: post.content.slice(0, 200) + "...",
-                    }}
+          <div className="flex flex-col-reverse md:flex-row mb-6 md:mb-0 gap-8 min-h-screen my-8">
+            <InfoSidebar />
+            <div className="flex flex-col gap-8 md:mb-8 w-full">
+              {posts.map((post: any) => (
+                <div
+                  key={post.uri}
+                  className="flex flex-col xl:flex-row p-4 bg-base-100 text-base-content justify-start items-center gap-4 rounded-lg w-full"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={post.apparatus.image.node.mediaItemUrl}
+                    alt={post.title}
+                    className="w-48 lg:w-80 h-full max-h-80 object-cover rounded-lg mr-4"
                   />
-                  {process.env.NODE_ENV === "development" ? (
-                    <Link
-                      className="link-hover link-info"
-                      href={`/about-us/apparatus/rescue-102`}
-                    >
-                      Click For Full Details
-                    </Link>
-                  ) : (
+                  <div className="flex flex-col gap-4">
+                    <h3 className="text-3xl text-primary">{post.title}</h3>
+                    <p className="text-neutral-content font-bold">
+                      {post.apparatus.model + " - " + post.apparatus.year}
+                    </p>
+                    <div
+                      className="prose"
+                      dangerouslySetInnerHTML={{
+                        __html: post.content.slice(0, 200) + "...",
+                      }}
+                    />
                     <Link
                       className="link-hover link-info"
                       href={`/about-us/apparatus/${post.uri}`}
                     >
                       Click For Full Details
                     </Link>
-                  )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </Suspense>
       </Container>

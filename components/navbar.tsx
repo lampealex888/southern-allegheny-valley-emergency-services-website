@@ -204,7 +204,7 @@ export default function Navbar() {
           </div>
           {/* Desktop navbar, hidden on mobile */}
           <div className="navbar-center hidden lg:flex z-10">
-            <ul className="menu menu-horizontal px-1 text-lg">
+            <ul className="menu menu-horizontal px-1 text-lg gap-0 gap-x-0 lg:gap-0">
               <li>
                 <details>
                   <summary>

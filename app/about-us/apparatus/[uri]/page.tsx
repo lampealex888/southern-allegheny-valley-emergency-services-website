@@ -1,7 +1,7 @@
 import Title from "@/components/title";
 import Container from "@/components/container";
 import Link from "next/link";
-import Sidebar from "@/components/info-sidebar";
+import InfoSidebar from "@/components/info-sidebar";
 import { Suspense } from "react";
 import Loading from "@/components/loading";
 
@@ -18,7 +18,7 @@ const backup_data = {
         image: {
           node: {
             mediaItemUrl:
-              "http://southern-allegheny-valley-emergency-services.local/wp-content/uploads/2024/03/01314490420.jpg",
+              "https://images.unsplash.com/photo-1552244935-439697eea0bd?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           },
         },
       },
@@ -79,8 +79,9 @@ export default async function PostDetails({ params }: any) {
       <Suspense fallback={<Loading />}>
         <Title>{post.title}</Title>
         <Container>
-          <Sidebar>
-            <div className="flex flex-col py-8 gap-4 mr-8">
+          <div className="flex flex-col-reverse md:flex-row mb-6 md:mb-0 gap-8 min-h-screen my-0 md:my-8">
+            <InfoSidebar />
+            <div className="flex flex-col mt-8 md:mt-0 md:py-8 gap-4 md:mr-8">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={post.apparatus.image.node.mediaItemUrl}
@@ -100,14 +101,14 @@ export default async function PostDetails({ params }: any) {
                 dangerouslySetInnerHTML={{
                   __html: post.content,
                 }}
-                className="w-3/4 leading-tight prose prose-xl text-primary-content"
+                className="md:w-3/4 leading-tight prose prose-xl text-primary-content"
               />
 
               <Link className="text-3xl link-hover" href="/about-us/apparatus">
                 ← Back to Apparatus
               </Link>
             </div>
-          </Sidebar>
+          </div>
         </Container>
       </Suspense>
     </div>

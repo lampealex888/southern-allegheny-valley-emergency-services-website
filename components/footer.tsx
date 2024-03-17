@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-base-300">
+    <footer className="bg-base-200">
       <div className="footer p-10 text-base-content max-w-7xl mx-auto">
         <nav>
           <h6 className="footer-title text-xl">Contact Information</h6>
