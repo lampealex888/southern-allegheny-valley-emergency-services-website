@@ -7,52 +7,55 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import Container from "../components/container";
 
 export default function Home() {
   return (
     <main>
       {/* Carousel 1 */}
-      <Swiper
-        style={
-          {
-            "--swiper-navigation-color": "text-base-content",
-          } as React.CSSProperties
-        }
-        slidesPerView={1}
-        loop={true}
-        navigation={true}
-        autoHeight={true}
-        modules={[Navigation]}
-        className=""
-      >
-        <SwiperSlide>
-          <img
-            className="max-w-7xl mx-auto w-full object-cover object-center max-h-[650px]"
-            src="https://images.unsplash.com/photo-1563062067-d1d4e31a089e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          ></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="max-w-7xl mx-auto w-full object-cover object-center max-h-[650px]"
-            src="https://plus.unsplash.com/premium_photo-1683133351425-a61570443654?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          ></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="max-w-7xl mx-auto w-full object-cover object-center max-h-[650px]"
-            src="https://images.unsplash.com/photo-1573632400288-4390dee9df40?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          ></img>
-        </SwiperSlide>
-      </Swiper>
+      <section>
+        <Swiper
+          style={
+            {
+              "--swiper-navigation-color": "text-base-content",
+            } as React.CSSProperties
+          }
+          slidesPerView={1}
+          loop={true}
+          navigation={true}
+          autoHeight={true}
+          modules={[Navigation]}
+          className=""
+        >
+          <SwiperSlide>
+            <img
+              className="max-w-7xl mx-auto w-full object-cover object-center max-h-[650px]"
+              src="https://images.unsplash.com/photo-1563062067-d1d4e31a089e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            ></img>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              className="max-w-7xl mx-auto w-full object-cover object-center max-h-[650px]"
+              src="https://plus.unsplash.com/premium_photo-1683133351425-a61570443654?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            ></img>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              className="max-w-7xl mx-auto w-full object-cover object-center max-h-[650px]"
+              src="https://images.unsplash.com/photo-1573632400288-4390dee9df40?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            ></img>
+          </SwiperSlide>
+        </Swiper>
+      </section>
       {/* Banner 1 */}
-      <div className="bg-primary text-primary-content">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col items-center py-16 px-4">
-            <h2 className="text-5xl font-extrabold tracking-tight italic mb-4 text-center">
+      <section className="bg-primary text-primary-content">
+        <Container>
+          <div className="flex flex-col items-center py-16">
+            <h2 className="text-5xl font-extrabold tracking-tight italic mb-6 text-center">
               About Southern Allegheny Valley Emergency Services
             </h2>
             <div className="flex flex-col lg:flex-row gap-10 max-w-full">
-              <p className="text-lg lg:max-w-lg tracking-tighter leading-relaxed">
+              <p className="text-lg lg:max-w-2xl text-center lg:text-left tracking-tighter leading-relaxed">
                 There are probably many perceptions of who we are. Many may
                 think we are career firefighters and are paid to be ready to
                 respond. Luckily, as fire prevention has worked to reduce the
@@ -101,18 +104,18 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </Container>
+      </section>
       {/* Carousel 2 */}
-      <div
+      <section
         className="bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
             "url(https://images.unsplash.com/photo-1642541400994-5bf3c9c0a8d9?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
         }}
       >
-        <div className="bg-base-100 bg-opacity-75 pb-16 min-h-[550px]">
-          <h3 className="text-5xl text-center font-bold italic text-secondary pt-16 pb-8">
+        <div className="bg-base-100 bg-opacity-75 py-8 min-h-[550px]">
+          <h3 className="text-5xl text-center font-bold italic text-secondary pb-8">
             Our Apparatus
           </h3>
           <Swiper
@@ -124,7 +127,7 @@ export default function Home() {
             breakpoints={{
               640: { slidesPerView: 1, slidesPerGroup: 1 },
               768: { slidesPerView: 2, slidesPerGroup: 2 },
-              1024: { slidesPerView: 3, slidesPerGroup: 3 },
+              1024: { slidesPerView: 4, slidesPerGroup: 4 },
             }}
             autoplay={{
               delay: 5000,
@@ -225,48 +228,50 @@ export default function Home() {
             </SwiperSlide>
           </Swiper>
         </div>
-      </div>
+      </section>
       {/* Banner 2 */}
-      <div
+      <section
         className="bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
             "url(https://images.unsplash.com/photo-1563062067-7700e1d9ae1d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
         }}
       >
-        <div className="bg-base-content bg-opacity-75 min-h-[400px] text-base-100 px-4 py-8">
-          <h3 className="text-5xl text-center font-bold italic md:py-16 tracking-tighter">
-            South Allegheny Vally Volunteer Emergency Services Members
-          </h3>
-          <p className="text-center md:mx-8 font-bold text-lg tracking-tighter my-4">
-            Our Department is 100% VOLUNTEER. We have existed for over 125 years
-            serving the Borough of Aspinwall and surrounding communities. Our
-            members work in the community, own businesses and are you neighbors.
-            One of the thing all of these members have in common is the belief
-            in our community and giving back to it. Many members are not only
-            volunteer firefighters, but also members of other service
-            organizations. You may know some of them through your affiliations
-            with these organizations.
-          </p>
-          <Link
-            href="/about-us/our-members"
-            className="btn btn-secondary text-xl uppercase flex w-full lg:w-1/4 mx-auto"
-          >
-            {" "}
-            Meet our members
-          </Link>
+        <div className="bg-base-content bg-opacity-75 min-h-[400px] text-base-100 py-16 flex items-center justify-center">
+          <Container>
+            <h3 className="text-5xl text-center font-bold italic tracking-tighter">
+              South Allegheny Valley Volunteer Emergency Services Members
+            </h3>
+            <p className="text-center md:mx-8 font-bold text-xl tracking-tighter my-4">
+              Our Department is 100% VOLUNTEER. We have existed for over 125
+              years serving the Borough of Aspinwall and surrounding
+              communities. Our members work in the community, own businesses and
+              are you neighbors. One of the thing all of these members have in
+              common is the belief in our community and giving back to it. Many
+              members are not only volunteer firefighters, but also members of
+              other service organizations. You may know some of them through
+              your affiliations with these organizations.
+            </p>
+            <Link
+              href="/about-us/our-members"
+              className="btn btn-secondary text-xl uppercase flex w-full lg:w-1/4 mx-auto"
+            >
+              {" "}
+              Meet our members
+            </Link>
+          </Container>
         </div>
-      </div>
+      </section>
       {/* Banner 3 */}
-      <div
+      <section
         className="bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
             "url(https://images.unsplash.com/photo-1531431199010-1f9985f83baa?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         }}
       >
-        <div className="bg-base-100 bg-opacity-75 min-h-[280px] md:min-h-[350px] text-secondary pb-8 md:pb-0">
-          <div className="flex flex-row justify-center min-h-[280px] md:min-h-[350px] items-center mx-16">
+        <div className="bg-base-100 bg-opacity-75 text-secondary py-16">
+          <div className="flex flex-row justify-center items-center mx-16">
             <Link
               href="/fire-prevention"
               className="flex flex-col h-full items-center"
@@ -283,7 +288,10 @@ export default function Home() {
               </span>
             </Link>
             <div className="border-l-2 md:border-l-4 border-base-content min-h-[120px] md:min-h-[200px] mx-16 md:mx-24"></div>
-            <Link href="/gallery/videos" className="flex flex-col min-h-max items-center">
+            <Link
+              href="/gallery/videos"
+              className="flex flex-col min-h-max items-center"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 384 512"
@@ -297,7 +305,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
